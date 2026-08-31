@@ -27,7 +27,7 @@ for value in speech_features:
     )
 negative_values = [x for x in speech_features if x < 0]
 
-print("\nNegative Activation Analysis:")
+print("\n------------------------------Negative Activation Analysis-------------------------------------------")
 print(f"Total input values: {len(speech_features)}")
 print(f"Negative input values: {len(negative_values)}")
 print(
@@ -35,7 +35,7 @@ print(
     f"{len(negative_values) / len(speech_features) * 100:.2f}%"
 )
 
-print("\nBehavior for negative inputs:")
+print("\n------------------------------Behavior for negative inputs-------------------------------------------")
 
 for value in negative_values:
     print(
