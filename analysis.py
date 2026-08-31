@@ -3,7 +3,6 @@ from activations import erelu, relu, leaky_relu
 
 
 negative_values = [x for x in speech_features if x < 0]
-# Count how many negative inputs remain negative
 erelu_preserved = sum(erelu(x) < 0 for x in negative_values)
 relu_preserved = sum(relu(x) < 0 for x in negative_values)
 leaky_relu_preserved = sum(leaky_relu(x) < 0 for x in negative_values)
